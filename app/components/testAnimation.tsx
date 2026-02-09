@@ -114,6 +114,23 @@ const TestAnimation = () => {
             ease: "power2",
             stagger: 1
           });
+
+                 gsap.to(".my-image", {
+            scrollTrigger: {
+              trigger: ".my-image",
+              scrub: true,
+              // pin: true,
+              start: "+100%",
+              end: "+=200%"
+            },
+            // duration: .05,
+            // opacity: 100
+           duration: 200, 
+  autoAlpha: 1, // Combines opacity and visibility for better performance
+  ease: "power2.inOut"
+            // transform: "rotate(30deg)",
+            // transformOrigin: "0 0"
+          });
           
           gsap.to(".textKo", {
             scrollTrigger: {
@@ -156,6 +173,7 @@ const TestAnimation = () => {
             text: " Designer.",
             ease: "power2",
           });
+    
           
           gsap.to(".textKoSM", {
             scrollTrigger: {
@@ -231,24 +249,24 @@ const TestAnimation = () => {
           .to(".my-image", { stagger: 1})
           
 
-          tlImg.to(".orange", {background: "#28a92b", ease: "slow", duration: ".2",  stagger: 1}, 1)
+          tlImg.to(".orange", { ease: "slow", duration: ".2",  stagger: 1}, 1)
           
 
-          var tlImgs = gsap.timeline( {
-            scrollTrigger: {
-              trigger: ".my-image",
-              scrub: true,
-              pin: true,
-              start: "+=2100%",
-              end: "+=0%"
-            },
-            transformOrigin: "left center"
-          });
-          tlImgs.from(".my-image",{ stagger: 1})
-          .to(".my-image", { stagger: 1})
+          // var tlImgs = gsap.timeline( {
+          //   scrollTrigger: {
+          //     trigger: ".my-image",
+          //     scrub: true,
+          //     pin: true,
+          //     start: "+=2100%",
+          //     end: "+=0%"
+          //   },
+          //   transformOrigin: "left center"
+          // });
+          // tlImgs.from(".my-image",{ stagger: 1})
+          // .to(".my-image", { stagger: 1})
           
 
-          tlImgs.to(".orange", {background: "#000", ease: "slow", duration: ".2",  stagger: 1}, 1)
+          // tlImgs.to(".orange", { ease: "slow", duration: ".2",  stagger: 1}, 1)
           
           // possible solution for old iOS bugs that don't display things inside an iframe correctly. Create a --full-height CSS variable and use it instead of height: 100%
           // function readHeight() {
@@ -281,16 +299,25 @@ const TestAnimation = () => {
 return(
     <>
     <div  ref={ref}>
-    <section className="panel orange text-white bg-gray-400  md:grid md:grid-cols-2 hidden h-screen justify-center items-center">
+    <section className="panel orange text-black md:grid md:grid-cols-2 hidden h-screen justify-center items-center">
       <div className='text-center  md:col-span-1 col-span-1  flex items-center justify-center'>
-      <Image
-                                            src={`https://res.cloudinary.com/dhdn7ukv9/image/upload/sudz7gynp33pdyqzsjpx`}
+        {/* <Image
+                                            src="file.svg"
                                             // loader={imageLoader}
                                             width={1000}
                                             height={1000}
                                            quality={100}
                                             alt="Picture"
-                                            className="h-auto w-96 my-image "
+                                            className="w-96 my-image opacity-0"
+                                        /> */}
+      <Image
+                                            src={`https://raw.githubusercontent.com/pat22292/PatrickPortfolio/4e540f4aa84c7e4f83277755f7f1f5a6f47d5417/assets/svg/3d3.svg`}
+                                            // loader={imageLoader}
+                                            width={1000}
+                                            height={1000}
+                                           quality={100}
+                                            alt="Picture"
+                                            className=" p-12 w-full my-image opacity-0"
                                         />
       </div>
   <div className='text-center  md:col-span-1 col-span-1   content-center place-items-center h-screen justify-center items-center  '>
@@ -325,19 +352,31 @@ return(
   </section>
   
 
-  <section className="panel flex bg-gray-400  orangeSM  md:hidden h-screen ">
-  <div className='text-center content-center place-items-center mx-8'>
+  <section className="panel row orangeSM  md:hidden  h-screen ">
+    
+  <div className='text-center content-center place-items-center mx-200'>
+      <Image
+                                            src={`https://res.cloudinary.com/dhdn7ukv9/image/upload/sudz7gynp33pdyqzsjpx`}
+                                            // loader={imageLoader}
+                                            width={1000}
+                                            height={1000}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="h-auto w-96 my-image opacity-0"
+                                        />
   <span className="line line-2SM col-span-1 h-screen  "></span>
-    <div className='text-white '>
+    <div className='text-black '>
     
       {/* <h1 className='text-5xl font-extrabold drop-shadow-xl'>Hi, I can be a  
         
          <span className="textKo text-5xl font-extrabold">  </span>
       <span className="blinking-cursor">|</span>
       </h1> */}
+     <div className='text-center  md:col-span-1 col-span-1  flex items-center justify-center'>
     
+      </div>
 
-      <h1 className='text-5xl text-white font-extrabold drop-shadow-xl md:hidden inline-block '>Hi, I can be a  
+      <h1 className='text-5xl text-black font-extrabold drop-shadow-xl md:hidden inline-block '>Hi, I can be a  
         <span className="textKoSM text-5xl font-extrabold"></span>
      <span className="blinking-cursor-sm ">|</span>
      </h1>

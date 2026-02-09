@@ -47,7 +47,7 @@ body {
 .blinking-cursor {
   font-weight: 5;
   font-size: 110px;
-  color: #fff;
+  color: #000;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
@@ -59,7 +59,7 @@ body {
   font-weight: 200;
   font-size: 40px;
   font-weight: 500;
-  color: #fff;
+  color: #000;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
@@ -73,7 +73,7 @@ body {
     color: transparent;
   }
   50% {
-    color: #fff;
+    color: #000;
   }
 }
 
@@ -82,7 +82,7 @@ body {
     color: transparent;
   }
   50% {
-    color: #fff;
+    color: #000;
   }
 }
 
@@ -91,7 +91,7 @@ body {
     color: transparent;
   }
   50% {
-    color: #fff;
+    color: #000;
   }
 }
 
@@ -100,7 +100,7 @@ body {
     color: transparent;
   }
   50% {
-    color: #fff;
+    color: #000;
   }
 }
 
@@ -109,6 +109,6 @@ body {
     color: transparent;
   }
   50% {
-    color: #fff;
+    color: #000;
   }
 }
