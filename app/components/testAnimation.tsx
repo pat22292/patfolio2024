@@ -9,6 +9,7 @@ import Image from 'next/image';
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 
 // const runTyping = () => {
@@ -101,6 +102,20 @@ const TestAnimation = () => {
           });
      
 
+               gsap.to("#typeWriterText", {
+            scrollTrigger: {
+             
+              trigger: "#typeWriterText",
+              toggleClass: "-translate-x-1/2",
+              scrub: true,
+              // pin: true,
+              start: "+0%",
+            },
+            duration: .05,
+            ease: "slow",
+            stagger: 1
+          });
+
           gsap.to(".textKo", {
             scrollTrigger: {
               trigger: ".textKo",
@@ -154,8 +169,8 @@ const TestAnimation = () => {
               trigger: ".my-image",
               scrub: true,
               // pin: true,
-              start: "+=410%",
-              end: "+=410%"
+              start: "+=390%",
+              end: "+=390%"
             },
             // duration: .05,
             // opacity: 100
@@ -177,8 +192,8 @@ const TestAnimation = () => {
               trigger: ".textKo",
               scrub: true,
               // pin: true,
-              start: "+=5000%",
-              end: "+=100%"
+              start: "+=4500%",
+              end: "+=50%"
             },
             duration:.1,
             text: " Mobile Dev.",
@@ -190,8 +205,8 @@ const TestAnimation = () => {
               trigger: ".my-image",
               scrub: true,
               // pin: true,
-              start: "+=700%",
-              end: "+=700%"
+              start: "+=625%",
+              end: "+=625%"
             },
             // duration: .05,
             // opacity: 100
@@ -344,9 +359,17 @@ const TestAnimation = () => {
 return(
     <>
     <div  ref={ref}>
-    
-    <section className="panel orange text-black md:grid md:grid-cols-2 hidden h-screen justify-center items-center">
-      <div className='text-center  md:col-span-1 col-span-1  flex items-center justify-center'>
+      <div className='fixed flex justify-center items-end h-screen  w-screen z-50 '>
+       <DotLottieReact
+      src="Mouse Scroll Down.json"
+      loop
+      autoplay
+      className='w-64  mb-10'
+    />
+      </div>
+
+    <section className="panel orange  text-black md:grid md:grid-cols-2 hidden h-screen justify-center items-center">
+      <div className='text-center  md:col-span-1 col-span-1   flex items-center justify-center'>
         {/* <Image
                                             src="file.svg"
                                             // loader={imageLoader}
@@ -366,7 +389,7 @@ return(
                                             className=" p-12 w-full my-image opacity-0"
                                         />
       </div>
-  <div className='text-center  md:col-span-1 col-span-1   content-center place-items-center h-screen justify-center items-center  '>
+  <div id='typeWriterText' className='text-center transition-transform duration-300 ease-in-out  -translate-x-1/2  md:col-span-1 col-span-1   content-center place-items-center h-screen justify-center items-center  '>
 
     <div className='whole-text  h-screen flex items-center justify-center  '>
     
@@ -432,7 +455,7 @@ return(
     </div>
   </section>
 
-    <div className="flex flex-col h-screen justify-center items-center description panel blue bg-blue-500 w-full text-center align-middle">
+    <div className="flex flex-col h-screen justify-center items-center description panel blue  w-full text-center align-middle">
     <div >
       <p>A ScrollTrigger with <code>scrub: true</code> links the scroll position to an animation's progress, making the scroll bar act like a scrubber while it's between the ScrollTrigger's <code>start</code> and <code>end</code>.</p>
       <div className="scroll-down">Scroll down<div className="arrow"></div></div>
