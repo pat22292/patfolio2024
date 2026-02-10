@@ -10,7 +10,7 @@ import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-
+import Navbar from './header';
 
 // const runTyping = () => {
 //   var tl = gsap.timeline({
@@ -100,7 +100,19 @@ const TestAnimation = () => {
             ease: "none",
             stagger: 1
           });
-     
+              gsap.to('.greetext', {
+       scrollTrigger: {
+             
+              trigger: ".greetext",
+             
+              scrub: true,
+              // pin: true,
+              start: "+=0%",
+            },
+            duration: 500,
+            text: "I can be your",
+            stagger: 1
+          });
 
                gsap.to("#typeWriterText", {
             scrollTrigger: {
@@ -109,12 +121,14 @@ const TestAnimation = () => {
               toggleClass: "-translate-x-1/2",
               scrub: true,
               // pin: true,
-              start: "+0%",
+              // start: "+0%",
             },
             duration: .05,
             ease: "slow",
             stagger: 1
           });
+
+ 
 
           gsap.to(".textKo", {
             scrollTrigger: {
@@ -359,16 +373,17 @@ const TestAnimation = () => {
 return(
     <>
     <div  ref={ref}>
-      <div className='fixed flex justify-center items-end h-screen  w-screen z-50 '>
+      <Navbar/>
+      <div className='fixed flex justify-center items-end h-screen  w-screen -z-40 '>
        <DotLottieReact
       src="Mouse Scroll Down.json"
       loop
       autoplay
-      className='w-64  mb-10'
+      className='w-64  mb-10 opacity-50'
     />
       </div>
 
-    <section className="panel orange  text-black md:grid md:grid-cols-2 hidden h-screen justify-center items-center">
+    <section className="panel orange text-gray-900 md:grid md:grid-cols-2 hidden h-screen justify-center items-center">
       <div className='text-center  md:col-span-1 col-span-1   flex items-center justify-center'>
         {/* <Image
                                             src="file.svg"
@@ -393,8 +408,8 @@ return(
 
     <div className='whole-text  h-screen flex items-center justify-center  '>
     
-      <h1 className='text-8xl font-akshar  font-extrabold  drop-shadow-xl md:inline-block hidden'>Hi, I can be a  
-        
+      <h1 className='text-8xl font-akshar  font-extrabold  drop-shadow-xl md:inline-block hidden'>
+        <span className="greetext font-akshar text-8xl font-extrabold "> Hi! I'm Patrick.</span>
          <span className="textKo font-akshar text-8xl font-extrabold ">  </span>
       <span className="blinking-cursor">|</span>
       </h1>
@@ -423,15 +438,15 @@ return(
 
   <section className="panel row orangeSM  md:hidden  h-screen ">
     
-  <div className='text-center content-center place-items-center mx-200'>
+  <div className='text-center content-center place-items-center pt-16'>
       <Image
-                                            src={`https://res.cloudinary.com/dhdn7ukv9/image/upload/sudz7gynp33pdyqzsjpx`}
+                                            src={`https://raw.githubusercontent.com/pat22292/PatrickPortfolio/4e540f4aa84c7e4f83277755f7f1f5a6f47d5417/assets/svg/3d3.svg`}
                                             // loader={imageLoader}
                                             width={1000}
                                             height={1000}
                                            quality={100}
                                             alt="Picture"
-                                            className="h-auto w-96 my-image opacity-0"
+                                            className="h-auto w-96 my-image-sm opacity-0"
                                         />
   <span className="line line-2SM col-span-1 h-screen  "></span>
     <div className='text-black '>
