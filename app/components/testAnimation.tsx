@@ -154,8 +154,8 @@ const TestAnimation = () => {
               trigger: ".my-image",
               scrub: true,
               // pin: true,
-              start: "+=420%",
-              end: "+=420%"
+              start: "+=410%",
+              end: "+=410%"
             },
             // duration: .05,
             // opacity: 100
@@ -178,7 +178,7 @@ const TestAnimation = () => {
               scrub: true,
               // pin: true,
               start: "+=5000%",
-              end: "+=150%"
+              end: "+=100%"
             },
             duration:.1,
             text: " Mobile Dev.",
@@ -344,6 +344,7 @@ const TestAnimation = () => {
 return(
     <>
     <div  ref={ref}>
+    
     <section className="panel orange text-black md:grid md:grid-cols-2 hidden h-screen justify-center items-center">
       <div className='text-center  md:col-span-1 col-span-1  flex items-center justify-center'>
         {/* <Image
