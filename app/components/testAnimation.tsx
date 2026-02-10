@@ -115,7 +115,8 @@ const TestAnimation = () => {
             stagger: 1
           });
 
-                 gsap.to(".my-image", {
+          
+          gsap.to(".my-image", {
             scrollTrigger: {
               trigger: ".my-image",
               scrub: true,
@@ -125,7 +126,10 @@ const TestAnimation = () => {
             },
             // duration: .05,
             // opacity: 100
-           duration: 200, 
+           duration: 200,
+                     attr:{
+            src: "https://raw.githubusercontent.com/pat22292/PatrickPortfolio/4e540f4aa84c7e4f83277755f7f1f5a6f47d5417/assets/svg/3d3.svg" 
+           }, 
   autoAlpha: 1, // Combines opacity and visibility for better performance
   ease: "power2.inOut"
             // transform: "rotate(30deg)",
@@ -145,6 +149,26 @@ const TestAnimation = () => {
             ease: "power2",
             stagger: 1
           });
+           gsap.to(".my-image", {
+            scrollTrigger: {
+              trigger: ".my-image",
+              scrub: true,
+              // pin: true,
+              start: "+=420%",
+              end: "+=420%"
+            },
+            // duration: .05,
+            // opacity: 100
+           duration: 200, 
+
+           attr:{
+            src: "https://raw.githubusercontent.com/pat22292/PatrickPortfolio/4e540f4aa84c7e4f83277755f7f1f5a6f47d5417/assets/svg/dev.svg" 
+           },
+            autoAlpha: 1, // Combines opacity and visibility for better performance
+            ease: "power2.InOut"
+            // transform: "rotate(30deg)",
+            // transformOrigin: "0 0"
+          });
                     
           
 
@@ -154,11 +178,32 @@ const TestAnimation = () => {
               scrub: true,
               // pin: true,
               start: "+=5000%",
-              end: "+=200%"
+              end: "+=150%"
             },
             duration:.1,
             text: " Mobile Dev.",
             ease: "none",
+          });
+
+                  gsap.to(".my-image", {
+            scrollTrigger: {
+              trigger: ".my-image",
+              scrub: true,
+              // pin: true,
+              start: "+=700%",
+              end: "+=700%"
+            },
+            // duration: .05,
+            // opacity: 100
+           duration: 200, 
+
+           attr:{
+            src: "https://raw.githubusercontent.com/pat22292/PatrickPortfolio/4e540f4aa84c7e4f83277755f7f1f5a6f47d5417/assets/svg/van-shadowed.svg" 
+           },
+            autoAlpha: 1, // Combines opacity and visibility for better performance
+            ease: "power2.InOut"
+            // transform: "rotate(30deg)",
+            // transformOrigin: "0 0"
           });
 
           gsap.to(".textKoSM", {
