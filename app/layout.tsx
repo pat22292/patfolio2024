@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import { ThemeInit } from "../.flowbite-react/init";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html  lang="en"  >
+      <ThemeInit />
       <body suppressHydrationWarning={true} className={inter.className}>{children}</body>
     </html>
   );

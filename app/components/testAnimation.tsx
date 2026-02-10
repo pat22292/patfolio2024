@@ -11,6 +11,9 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import Navbar from './header';
+import { Progress } from "flowbite-react";
+import { Button } from 'flowbite-react';
+
 
 // const runTyping = () => {
 //   var tl = gsap.timeline({
@@ -43,19 +46,20 @@ const TestAnimation = () => {
     
     const ref = useRef<HTMLInputElement>(null);
     const container = useRef();
-    
+
 
     
     useEffect(() => {
-        const listener = (e: any) => {
-            if (ref.current != null) {
-                if (!ref.current.contains(e.target)) {
-                    // setShowOptions(false)
-                    // setCursor(-1)
-                }
-            }
+ window.scrollTo(0, 0); 
+        // const listener = (e: any) => {
+        //     if (ref.current != null) {
+        //         if (!ref.current.contains(e.target)) {
+        //             // setShowOptions(false)
+        //             // setCursor(-1)
+        //         }
+        //     }
 
-        };
+        // };
 
         // document.addEventListener('click', listener)
         // document.addEventListener('focusin', listener)
@@ -107,7 +111,7 @@ const TestAnimation = () => {
              
               scrub: true,
               // pin: true,
-              start: "+=0%",
+              start: "top top",
             },
             duration: 500,
             text: "I can be your",
@@ -183,8 +187,8 @@ const TestAnimation = () => {
               trigger: ".my-image",
               scrub: true,
               // pin: true,
-              start: "+=390%",
-              end: "+=390%"
+              start: "+=395%",
+              end: "+=395%"
             },
             // duration: .05,
             // opacity: 100
@@ -206,7 +210,7 @@ const TestAnimation = () => {
               trigger: ".textKo",
               scrub: true,
               // pin: true,
-              start: "+=4500%",
+              start: "+=4600%",
               end: "+=50%"
             },
             duration:.1,
@@ -219,8 +223,8 @@ const TestAnimation = () => {
               trigger: ".my-image",
               scrub: true,
               // pin: true,
-              start: "+=625%",
-              end: "+=625%"
+              start: "+=700%",
+              end: "+=700%"
             },
             // duration: .05,
             // opacity: 100
@@ -374,7 +378,8 @@ return(
     <>
     <div  ref={ref}>
       <Navbar/>
-      <div className='fixed flex justify-center items-end h-screen  w-screen -z-40 '>
+     
+      <div className='fixed flex justify-center items-end h-screen  w-screen z-40 '>
        <DotLottieReact
       src="Mouse Scroll Down.json"
       loop
@@ -384,6 +389,7 @@ return(
       </div>
 
     <section className="panel orange text-gray-900 md:grid md:grid-cols-2 hidden h-screen justify-center items-center">
+     
       <div className='text-center  md:col-span-1 col-span-1   flex items-center justify-center'>
         {/* <Image
                                             src="file.svg"
@@ -469,12 +475,182 @@ return(
 
     </div>
   </section>
+ 
+    <div className="flex flex-col h-screen  description panel blue  w-full text-center align-middle">
+       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-10">Professional Skills</h2>
+    
+   
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-    <div className="flex flex-col h-screen justify-center items-center description panel blue  w-full text-center align-middle">
-    <div >
+      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div className="text-patcolor mb-4">
+       
+          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+        </div>
+        <h3 className="text-xl font-semibold text-gray-800">Web App Development</h3>
+        {/* <p className="text-gray-600 mt-2">NextJS, Tailwind CSS, GSAP</p> */}
+
+               <Progress
+      progress={80}
+      progressLabelPosition="outside"
+      textLabel="Wordpress"
+      textLabelPosition="outside"
+      color='dark'
+      size="lg"
+      labelProgress
+      labelText
+    />
+                 <Progress
+      progress={60}
+      progressLabelPosition="outside"
+      textLabel="NextJS"
+      textLabelPosition="outside"
+         color='dark'
+      size="lg"
+      labelProgress
+      labelText
+    />
+              <Progress
+      progress={40}
+      progressLabelPosition="outside"
+      textLabel="GSAP"
+      textLabelPosition="outside"
+      size="lg"
+         color='dark'
+      labelProgress
+      labelText
+    />
+      </div>
+      
+  
+      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div className="text-patcolor mb-4">
+          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
+        </div>
+        <h3 className="text-xl font-semibold text-gray-800">Backend API</h3>
+        {/* <p className="text-gray-600 mt-2">Node.js, Laravel, SQL</p> */}
+          <Progress
+      progress={70}
+      progressLabelPosition="outside"
+      textLabel="Laravel"
+      textLabelPosition="outside"
+      color='dark'
+      size="lg"
+      labelProgress
+      labelText
+    />
+                 <Progress
+      progress={40}
+      progressLabelPosition="outside"
+      textLabel="Asp.net"
+      textLabelPosition="outside"
+         color='dark'
+      size="lg"
+      labelProgress
+      labelText
+    />
+              <Progress
+      progress={30}
+      progressLabelPosition="outside"
+      textLabel="NextJS"
+      textLabelPosition="outside"
+      size="lg"
+         color='dark'
+      labelProgress
+      labelText
+    />
+      </div>
+<div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div className="text-patcolor mb-4">
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-10">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
+</svg>
+
+        </div>
+        <h3 className="text-xl font-semibold text-gray-800">Design</h3>
+        {/* <p className="text-gray-600 mt-2">Node.js, Laravel, SQL</p> */}
+          <Progress
+      progress={85}
+      progressLabelPosition="outside"
+      textLabel="Photoshop"
+      textLabelPosition="outside"
+      color='dark'
+      size="lg"
+      labelProgress
+      labelText
+    />
+                 <Progress
+      progress={65}
+      progressLabelPosition="outside"
+      textLabel="Illustrator"
+      textLabelPosition="outside"
+         color='dark'
+      size="lg"
+      labelProgress
+      labelText
+    />
+              <Progress
+      progress={30}
+      progressLabelPosition="outside"
+      textLabel="Figma"
+      textLabelPosition="outside"
+      size="lg"
+         color='dark'
+      labelProgress
+      labelText
+    />
+      </div>
+      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div className="text-patcolor mb-4">
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-10">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
+</svg>
+
+        </div>
+        <h3 className="text-xl font-semibold text-gray-800">Android Development</h3>
+        {/* <p className="text-gray-600 mt-2">Node.js, Laravel, SQL</p> */}
+          <Progress
+      progress={85}
+      progressLabelPosition="outside"
+      textLabel="JetpackCompose"
+      textLabelPosition="outside"
+      color='dark'
+      size="lg"
+      labelProgress
+      labelText
+    />
+                 <Progress
+      progress={40}
+      progressLabelPosition="outside"
+      textLabel="NativeScript"
+      textLabelPosition="outside"
+         color='dark'
+      size="lg"
+      labelProgress
+      labelText
+    />
+              <Progress
+      progress={10}
+      progressLabelPosition="outside"
+      textLabel="React Native"
+      textLabelPosition="outside"
+      size="lg"
+         color='dark'
+      labelProgress
+      labelText
+    />
+      </div>
+    </div>
+
+
+  </div>
+   
+    {/* <div >
       <p>A ScrollTrigger with <code>scrub: true</code> links the scroll position to an animation's progress, making the scroll bar act like a scrubber while it's between the ScrollTrigger's <code>start</code> and <code>end</code>.</p>
       <div className="scroll-down">Scroll down<div className="arrow"></div></div>
-    </div>
+    </div> */}
+    
   </div>
 
 
