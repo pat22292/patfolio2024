@@ -843,7 +843,7 @@ return(
     <span className="line line-3"></span>
     <span className=" text-6xl font-akshar font-semibold" >
 
-    There's a lot more projects to shown, this website it self is made with GSAP Library. if you want something like this please don't hesitate to contact me.
+There are many more projects to show. This website itself was built using the GSAP library. If you'd like something like this, please don't hesitate to contact me.
     </span>
   </div>
   </section>
