@@ -306,14 +306,14 @@ const TestAnimation = () => {
                 scrub: true,
                 pin: true,
                 start: "top top",
-                end: "100%"
+                end: "150%"
               },
              
             ease: "slow",
             stagger: 1
             });
-               tlCarousel.from(".carousel", {translateX: "-100%", duration: 10, stagger: 1},0)
-            .to(".carousel", {translateX: 0, duration: 10, stagger: 1}, 1);
+               tlCarousel.from(".carousel", {translateX: "-100%", duration: 500, stagger: 1},0)
+            .to(".carousel", {translateX: 0, duration: 500, stagger: 1}, 1);
 
 
           // gsap.from(".line-1", {
@@ -342,9 +342,9 @@ const TestAnimation = () => {
               }
             });
           
-          tl.from(".purple span", {scale: 0.3, rotation:45, autoAlpha: 0, ease: "power2"})
+          tl.from(".purple span", {scale: 0.3,  translateX: -100, autoAlpha: 0, ease: "power2"})
             .from(".line-3", {scaleX: 0, transformOrigin: "left center", ease: "none"}, 0)
-            .to(".purple", {backgroundColor: "#28a92b",  stagger: 1}, 1);
+            // .to(".purple", {backgroundColor: "#28a92b",  stagger: 1}, 1);
           
      
           
@@ -535,7 +535,7 @@ return(
                                             className=" w-screen h-screen absolute opacity-10 z-10"
                                         /> */}
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-screen   ">
-    <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-10 z-50">Professional Skills</h2>
+    <h2 className="font-akshar text-4xl font-extrabold text-gray-900 text-center mb-10 z-50">Professional Skills</h2>
     
    
     <div className="grid   grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -731,40 +731,84 @@ return(
   </section>
 
 
-  <section className=" carousel h-screen overflow-hidden">
- <h1 className=' col-span-4 h-56'>My Current Project.</h1>
-    <div className='grid grid-cols-4'>
-   
-          <div  className="scroll-container col-span-4 absolute w-[4800px]  h-screen flex flex-nowrap overflow-hidden">
+  <section className=" items-center justify-center  text-center overflow-hidden">
+  <div className='w-screen'>
+   <h1 className='font-akshar sm:text-6xl text-2xl font-extrabold w-screen'>Here's my current ecommerce project.</h1>
+  </div>
+  
+          <div  className=" carousel   w-[4800px]  h-screen flex flex-nowrap overflow-hidden">
       {/* Example Carousel Items (Panels) */}
-      <div className="panelo  w-[800px]  bg-red-400 flex items-center justify-center text-4xl overflow-hidden">
-        <Image
-                                            src={`/depot.png`}
+      <div className="panelo  w-[800px]   flex items-center justify-center text-4xl overflow-hidden">
+          
+          <Image
+                                            src={`/mobileDepotCart.jpg`}
                                             // loader={imageLoader}
-                                            width={1000}
-                                            height={1000}
+                                            width={300}
+                                            height={100}
                                            quality={100}
                                             alt="Picture"
-                                            className=" w-96  absolute z-50 shadow-2xl "
+                                            className="  absolute z-50 shadow-2xl "
                                         />
       </div>
-      <div className="panelo w-[800px]   bg-blue-400 flex items-center justify-center text-4xl  ">
-        Slide 2
+      <div className="panelo w-[800px]    flex items-center justify-center text-4xl  ">
+           
+          <Image
+                                            src={`/mobileDepotProd.jpg`}
+                                            // loader={imageLoader}
+                                            width={300}
+                                            height={100}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="  absolute z-50 shadow-2xl "
+                                        />
       </div>
-      <div className="panelo w-[800px]   bg-green-400 flex items-center justify-center text-4xl ">
-        Slide 3
+      <div className="panelo w-[800px]    flex items-center justify-center text-4xl ">
+             <Image
+                                            src={`/mobileDepot.jpg`}
+                                            // loader={imageLoader}
+                                            width={300}
+                                            height={100}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="  absolute z-50 shadow-2xl "
+                                        />
       </div>
-      <div className="panelo w-[800px]   bg-purple-400 flex items-center justify-center text-4xl ">
-        Slide 4
+      <div className="panelo w-[800px]    flex items-center justify-center text-4xl ">
+         <Image
+                                            src={`/cartDepot.png`}
+                                            // loader={imageLoader}
+                                            width={800}
+                                            height={400}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="  absolute z-50 shadow-2xl "
+                                        />
       </div>
-      <div className="panelo w-[800px]   bg-green-400 flex items-center justify-center text-4xl ">
-        Slide 3
+      <div className="panelo w-[800px]    flex items-center justify-center text-4xl ">
+         <Image
+                                            src={`/depotProduct.png`}
+                                            // loader={imageLoader}
+                                            width={500}
+                                            height={400}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="  absolute z-50 shadow-2xl "
+                                        />
       </div>
-         <div className="panelo w-[800px]   bg-blue-400 flex items-center justify-center text-4xl ">
-        Slide 2
+         <div className="panelo w-[800px]    flex items-center justify-center text-4xl ">
+        
+                                               <Image
+                                            src={`/depot.png`}
+                                            // loader={imageLoader}
+                                            width={600}
+                                            height={600}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="  absolute z-50 shadow-2xl "
+                                        />
       </div>
     </div>
-    </div>
+    
 
 
       {/* <div className='grid grid-cols-2  h-screen'>
@@ -794,12 +838,12 @@ return(
   
 
 
-  <section className="panel purple bg-purple-500 flex flex-col h-screen justify-center items-center w-full ">
-  <div className='grid grid-cols-1  text-center content-center  place-items-center' >
+  <section className="panel purple flex flex-col h-screen justify-center items-center w-full ">
+  <div className='grid grid-cols-1  text-center content-center  place-items-center px-64' >
     <span className="line line-3"></span>
-    <span>
+    <span className=" text-6xl font-akshar font-semibold" >
 
-    This panel gets pinned in a similar way, and has a more involved animation that's wrapped in a timeline, fading the background color and animating the transforms of the paragraph in addition to the line, all synced with the scroll position perfectly.
+    There's a lot more projects to shown, this website it self is made with GSAP Library. if you want something like this please don't hesitate to contact me.
     </span>
   </div>
   </section>
@@ -807,7 +851,10 @@ return(
 
 
 <section className="panel gray h-screen flex flex-col justify-center items-center">
-  DONE!
+    <span className=" text-8xl font-akshar font-extrabold" >
+
+    Let's talk about your plan!
+    </span>
 </section>
 
 
