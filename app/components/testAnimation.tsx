@@ -50,29 +50,29 @@ const TestAnimation = () => {
 
   
   
-    useEffect(() => {
-      window.scrollTo(0, 0); 
-gsap.to(window, { duration: 0, scrollTo: 0, overwrite: true });
+//     useEffect(() => {
+//       window.scrollTo(0, 0); 
+// gsap.to(window, { duration: 0, scrollTo: 0, overwrite: true });
   
    
  
-        // const listener = (e: any) => {
-        //     if (ref.current != null) {
-        //         if (!ref.current.contains(e.target)) {
-        //             // setShowOptions(false)
-        //             // setCursor(-1)
-        //         }
-        //     }
+//         // const listener = (e: any) => {
+//         //     if (ref.current != null) {
+//         //         if (!ref.current.contains(e.target)) {
+//         //             // setShowOptions(false)
+//         //             // setCursor(-1)
+//         //         }
+//         //     }
 
-        // };
+//         // };
 
-        // document.addEventListener('click', listener)
-        // document.addEventListener('focusin', listener)
-        // return () => {
-        //     document.removeEventListener('click', listener);
-        //     document.removeEventListener('focusin', listener);
-        // }
-    }, []);
+//         // document.addEventListener('click', listener)
+//         // document.addEventListener('focusin', listener)
+//         // return () => {
+//         //     document.removeEventListener('click', listener);
+//         //     document.removeEventListener('focusin', listener);
+//         // }
+//     }, []);
 
     useGSAP(
         () => {
