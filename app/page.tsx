@@ -7,7 +7,7 @@ import React, { useRef, useEffect } from 'react';
 export default function Home() {
     useEffect(() => {
       window.scrollTo(0, 0); 
-gsap.to(window, { duration: 0, scrollTo: 0, overwrite: true });
+
   
    
  
