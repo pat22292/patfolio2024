@@ -51,8 +51,8 @@ const TestAnimation = () => {
   
   
     useEffect(() => {
- window.scrollTo(0, 0); 
-
+      window.scrollTo(0, 0); 
+gsap.to(window, { duration: 0, scrollTo: 0, overwrite: true });
   
    
  
