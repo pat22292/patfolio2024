@@ -13,7 +13,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import Navbar from './header';
 import { Progress } from "flowbite-react";
 import { Button } from 'flowbite-react';
-
+import ScrollCarousel from '../components/carousel';
 
 // const runTyping = () => {
 //   var tl = gsap.timeline({
@@ -48,9 +48,14 @@ const TestAnimation = () => {
     const container = useRef();
 
 
-    
+  
+  
     useEffect(() => {
  window.scrollTo(0, 0); 
+
+  
+   
+ 
         // const listener = (e: any) => {
         //     if (ref.current != null) {
         //         if (!ref.current.contains(e.target)) {
@@ -74,7 +79,7 @@ const TestAnimation = () => {
             // gsap code here...
              // --- RED PANEL ---
     
-
+  
 
           
           // --- ORANGE PANEL ---
@@ -155,7 +160,7 @@ const TestAnimation = () => {
               scrub: true,
               // pin: true,
               start: "+100%",
-              end: "+=200%"
+              end: "+=250%"
             },
             // duration: .05,
             // opacity: 100
@@ -164,7 +169,8 @@ const TestAnimation = () => {
             src: "https://raw.githubusercontent.com/pat22292/PatrickPortfolio/4e540f4aa84c7e4f83277755f7f1f5a6f47d5417/assets/svg/3d3.svg" 
            }, 
   autoAlpha: 1, // Combines opacity and visibility for better performance
-  ease: "power2.inOut"
+  ease: "power2",
+            stagger: 1
             // transform: "rotate(30deg)",
             // transformOrigin: "0 0"
           });
@@ -195,7 +201,7 @@ const TestAnimation = () => {
            duration: 200, 
 
            attr:{
-            src: "https://raw.githubusercontent.com/pat22292/PatrickPortfolio/4e540f4aa84c7e4f83277755f7f1f5a6f47d5417/assets/svg/dev.svg" 
+            src: "/dev.svg" 
            },
             autoAlpha: 1, // Combines opacity and visibility for better performance
             ease: "power2.InOut"
@@ -218,6 +224,19 @@ const TestAnimation = () => {
             ease: "none",
           });
 
+          gsap.to(".professionalSec",{
+            scrollTrigger:{
+              trigger: ".progressB",
+              scrub: true,
+            start: "top top",
+              end: "+=100%"
+              
+            },
+            ease: "none",
+            duration: 1,
+            transformOrigin: "left center"
+          })
+
                   gsap.to(".my-image", {
             scrollTrigger: {
               trigger: ".my-image",
@@ -231,7 +250,7 @@ const TestAnimation = () => {
            duration: 200, 
 
            attr:{
-            src: "https://raw.githubusercontent.com/pat22292/PatrickPortfolio/4e540f4aa84c7e4f83277755f7f1f5a6f47d5417/assets/svg/van-shadowed.svg" 
+            src: "/van-shadowed.svg" 
            },
             autoAlpha: 1, // Combines opacity and visibility for better performance
             ease: "power2.InOut"
@@ -280,20 +299,36 @@ const TestAnimation = () => {
           });
 
                     
-          
-          gsap.from(".line-1", {
-            scrollTrigger: {
-              trigger: ".red",
-              scrub: true,
-              pin: true,
-              start: "top top",
-              end: "+=400%"
-            },
-            scaleX: 0,
-            transformOrigin: "left center", 
-            ease: "none",
+             var tlCarousel = gsap.timeline({
+              scrollTrigger: {
+                trigger: ".carousel",
+                
+                scrub: true,
+                pin: true,
+                start: "top top",
+                end: "100%"
+              },
+             
+            ease: "slow",
             stagger: 1
-          });
+            });
+               tlCarousel.from(".carousel", {translateX: "-100%", duration: 10, stagger: 1},0)
+            .to(".carousel", {translateX: 0, duration: 10, stagger: 1}, 1);
+
+
+          // gsap.from(".line-1", {
+          //   scrollTrigger: {
+          //     trigger: ".red",
+          //     scrub: true,
+          //     pin: true,
+          //     start: "top top",
+          //     end: "+=400%"
+          //   },
+          //   scaleX: 0,
+          //   transformOrigin: "left center", 
+          //   ease: "none",
+          //   stagger: 1
+          // });
           
 
           // --- PURPLE/GREEN PANEL ---
@@ -311,14 +346,18 @@ const TestAnimation = () => {
             .from(".line-3", {scaleX: 0, transformOrigin: "left center", ease: "none"}, 0)
             .to(".purple", {backgroundColor: "#28a92b",  stagger: 1}, 1);
           
+     
           
+          // tlCarousel.from(".purple span", {scale: 0.3, rotation:45, autoAlpha: 0, ease: "power2"})
+          //   .from(".line-3", {scaleX: 0, transformOrigin: "left center", ease: "none"}, 0)
+          //   .to(".purple", {backgroundColor: "#28a92b",  stagger: 1}, 1);
 
           var tlImg = gsap.timeline( {
             scrollTrigger: {
               trigger: ".my-image",
               scrub: true,
               pin: true,
-              start: "+=1100%",
+              start: "+=100%",
               end: "+=0%"
             },
               transformOrigin: "left center"
@@ -330,6 +369,7 @@ const TestAnimation = () => {
           tlImg.to(".orange", { ease: "slow", duration: ".2",  stagger: 1}, 1)
           
 
+          
           // var tlImgs = gsap.timeline( {
           //   scrollTrigger: {
           //     trigger: ".my-image",
@@ -373,13 +413,21 @@ const TestAnimation = () => {
         { scope: ref }
     ); 
 
-  
 return(
     <>
     <div  ref={ref}>
       <Navbar/>
      
       <div className='fixed flex justify-center items-end h-screen  w-screen z-40 '>
+              <Image
+                                            src={`/cb.png`}
+                                            // loader={imageLoader}
+                                            width={1000}
+                                            height={1000}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="w-screen h-screen absolute my-image-sm opacity-10 z-0"
+                                        />
        <DotLottieReact
       src="Mouse Scroll Down.json"
       loop
@@ -476,42 +524,54 @@ return(
     </div>
   </section>
  
-    <div className="flex flex-col h-screen  description panel blue  w-full text-center align-middle">
-       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-10">Professional Skills</h2>
+    <section className="flex items-center justify-center sm:h-screen  py-5  description panel blue text-center  professionalSec z-50">
+      {/* <Image
+                                            src={`/cb.png`}
+                                            // loader={imageLoader}
+                                            width={1000}
+                                            height={1000}
+                                           quality={100}
+                                            alt="Picture"
+                                            className=" w-screen h-screen absolute opacity-10 z-10"
+                                        /> */}
+       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-screen   ">
+    <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-10 z-50">Professional Skills</h2>
     
    
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid   grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+      <div className=" p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
         <div className="text-patcolor mb-4">
        
           <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
         </div>
-        <h3 className="text-xl font-semibold text-gray-800">Web App Development</h3>
+        <h3 className="text-xl font-semibold text-gray-800 z-50">Web Development</h3>
         {/* <p className="text-gray-600 mt-2">NextJS, Tailwind CSS, GSAP</p> */}
 
                <Progress
-      progress={80}
-      progressLabelPosition="outside"
-      textLabel="Wordpress"
-      textLabelPosition="outside"
-      color='dark'
-      size="lg"
-      labelProgress
-      labelText
-    />
+                className='progressB '
+                progress={80}
+                progressLabelPosition="outside"
+                textLabel="Wordpress"
+                textLabelPosition="outside"
+                color='dark'
+                size="lg"
+                labelProgress
+                labelText
+              />
                  <Progress
-      progress={60}
-      progressLabelPosition="outside"
-      textLabel="NextJS"
-      textLabelPosition="outside"
-         color='dark'
-      size="lg"
-      labelProgress
-      labelText
+                className='progressB'
+                progress={60}
+                progressLabelPosition="outside"
+                textLabel="NextJS"
+                textLabelPosition="outside"
+                  color='dark'
+                size="lg"
+                labelProgress
+                labelText
     />
               <Progress
+              className='progressB'
       progress={40}
       progressLabelPosition="outside"
       textLabel="GSAP"
@@ -531,6 +591,7 @@ return(
         <h3 className="text-xl font-semibold text-gray-800">Backend API</h3>
         {/* <p className="text-gray-600 mt-2">Node.js, Laravel, SQL</p> */}
           <Progress
+          className='progressB'
       progress={70}
       progressLabelPosition="outside"
       textLabel="Laravel"
@@ -541,16 +602,20 @@ return(
       labelText
     />
                  <Progress
+                 className='progressB'
+    
       progress={40}
       progressLabelPosition="outside"
       textLabel="Asp.net"
       textLabelPosition="outside"
-         color='dark'
+      color='dark'
       size="lg"
       labelProgress
       labelText
     />
               <Progress
+              className='progressB'
+  
       progress={30}
       progressLabelPosition="outside"
       textLabel="NextJS"
@@ -571,6 +636,7 @@ return(
         <h3 className="text-xl font-semibold text-gray-800">Design</h3>
         {/* <p className="text-gray-600 mt-2">Node.js, Laravel, SQL</p> */}
           <Progress
+          className='progressB'
       progress={85}
       progressLabelPosition="outside"
       textLabel="Photoshop"
@@ -581,6 +647,8 @@ return(
       labelText
     />
                  <Progress
+                 className='progressB'
+    
       progress={65}
       progressLabelPosition="outside"
       textLabel="Illustrator"
@@ -591,6 +659,8 @@ return(
       labelText
     />
               <Progress
+              className='progressB'
+  
       progress={30}
       progressLabelPosition="outside"
       textLabel="Figma"
@@ -603,14 +673,17 @@ return(
       </div>
       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
         <div className="text-patcolor mb-4">
-         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-10">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
+<svg  className=' w-16' viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.05677 2.33758C3.92904 2.33758 3.82353 2.23484 3.82353 2.10711C3.82353 1.97938 3.92904 1.87942 4.05677 1.87942C4.1845 1.87942 4.29001 1.97938 4.29001 2.10711C4.29001 2.23484 4.1845 2.33758 4.05677 2.33758ZM1.5022 2.33758C1.37447 2.33758 1.26895 2.23484 1.26895 2.10711C1.26895 1.97938 1.37447 1.87942 1.5022 1.87942C1.62993 1.87942 1.73266 1.97938 1.73266 2.10711C1.73266 2.23484 1.62993 2.33758 1.5022 2.33758ZM4.14007 0.946447L4.60378 0.146756C4.62877 0.0995519 4.61211 0.041241 4.56768 0.0162506C4.52048 -0.0115164 4.46217 0.00514383 4.44273 0.0523478L3.96791 0.860369C3.59584 0.69099 3.19321 0.602136 2.77671 0.604912C2.35187 0.604912 1.94369 0.696544 1.59105 0.857593L1.12179 0.0495711C1.0968 0.00236706 1.03849 -0.0142931 0.991284 0.013474C0.94408 0.0384643 0.930197 0.0967751 0.955187 0.143979L1.41612 0.943671C0.624759 1.37684 0.0805245 2.17931 0 3.12894H5.55341C5.47567 2.18208 4.93421 1.37961 4.14007 0.946447Z" fill="#27AAE1"/>
 </svg>
 
+
+
         </div>
-        <h3 className="text-xl font-semibold text-gray-800">Android Development</h3>
+        <h3 className="text-xl font-semibold text-gray-800">Android Dev.</h3>
         {/* <p className="text-gray-600 mt-2">Node.js, Laravel, SQL</p> */}
           <Progress
+          className='progressB'
       progress={85}
       progressLabelPosition="outside"
       textLabel="JetpackCompose"
@@ -621,6 +694,8 @@ return(
       labelText
     />
                  <Progress
+                 className='progressB'
+    
       progress={40}
       progressLabelPosition="outside"
       textLabel="NativeScript"
@@ -631,6 +706,8 @@ return(
       labelText
     />
               <Progress
+              className='progressB'
+  
       progress={10}
       progressLabelPosition="outside"
       textLabel="React Native"
@@ -651,18 +728,66 @@ return(
       <div className="scroll-down">Scroll down<div className="arrow"></div></div>
     </div> */}
     
-  </div>
+  </section>
 
 
-  <section className="panel red bg-red-500 w-full flex flex-col h-screen justify-center items-center">
-    <div className='grid grid-cols-2 m:w-3/4 w-1/3'>
-    <span className="line line-1 w-full col-span-2"></span>
+  <section className=" carousel h-screen overflow-hidden">
+ <h1 className=' col-span-4 h-56'>My Current Project.</h1>
+    <div className='grid grid-cols-4'>
+   
+          <div  className="scroll-container col-span-4 absolute w-[4800px]  h-screen flex flex-nowrap overflow-hidden">
+      {/* Example Carousel Items (Panels) */}
+      <div className="panelo  w-[800px]  bg-red-400 flex items-center justify-center text-4xl overflow-hidden">
+        <Image
+                                            src={`/depot.png`}
+                                            // loader={imageLoader}
+                                            width={1000}
+                                            height={1000}
+                                           quality={100}
+                                            alt="Picture"
+                                            className=" w-96  absolute z-50 shadow-2xl "
+                                        />
+      </div>
+      <div className="panelo w-[800px]   bg-blue-400 flex items-center justify-center text-4xl  ">
+        Slide 2
+      </div>
+      <div className="panelo w-[800px]   bg-green-400 flex items-center justify-center text-4xl ">
+        Slide 3
+      </div>
+      <div className="panelo w-[800px]   bg-purple-400 flex items-center justify-center text-4xl ">
+        Slide 4
+      </div>
+      <div className="panelo w-[800px]   bg-green-400 flex items-center justify-center text-4xl ">
+        Slide 3
+      </div>
+         <div className="panelo w-[800px]   bg-blue-400 flex items-center justify-center text-4xl ">
+        Slide 2
+      </div>
+    </div>
+    </div>
+
+
+      {/* <div className='grid grid-cols-2  h-screen'>
+        <div className='flex justify-center items-center col-span-1'>
+                <Image
+                                            src={`/depot.png`}
+                                            // loader={imageLoader}
+                                            width={1000}
+                                            height={1000}
+                                           quality={100}
+                                            alt="Picture"
+                                            className=" w-1/3  absolute z-50 shadow-2xl "
+                                        />
+        </div>
+      </div> */}
+
+    {/* <span className="line line-1 w-full col-span-2"></span>
     <p className="w-full col-span-2">
 
     This line's animation will begin when it enters the viewport and finish when its top edge hits the top of the viewport, staying perfectly in sync with the scrollbar because it has <code>scrub:&nbsp;true</code>
-    </p>
+    </p> */}
 
-    </div>
+  
   </section>
 
 
