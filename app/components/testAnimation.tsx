@@ -426,7 +426,7 @@ return(
                                             height={1000}
                                            quality={100}
                                             alt="Picture"
-                                            className="w-screen h-screen absolute my-image-sm opacity-10 z-0"
+                                            className=" h-screen absolute my-image-sm opacity-10 z-0"
                                         />
        <DotLottieReact
       src="Mouse Scroll Down.json"
@@ -492,7 +492,7 @@ return(
 
   <section className="panel row orangeSM  md:hidden  h-screen ">
     
-  <div className='text-center content-center place-items-center pt-16'>
+  <div className='text-center content-center place-items-center '>
       <Image
                                             src={`https://raw.githubusercontent.com/pat22292/PatrickPortfolio/4e540f4aa84c7e4f83277755f7f1f5a6f47d5417/assets/svg/3d3.svg`}
                                             // loader={imageLoader}
@@ -514,7 +514,8 @@ return(
     
       </div>
 
-      <h1 className='text-5xl text-black font-extrabold drop-shadow-xl md:hidden inline-block '>Hi, I can be a  
+      <h1 className='text-5xl text-black font-extrabold drop-shadow-xl md:hidden inline-block '>
+        <span className="textKoSMFirst text-5xl font-extrabold">Hi, I can be a  </span>
         <span className="textKoSM text-5xl font-extrabold"></span>
      <span className="blinking-cursor-sm ">|</span>
      </h1>
@@ -534,7 +535,7 @@ return(
                                             alt="Picture"
                                             className=" w-screen h-screen absolute opacity-10 z-10"
                                         /> */}
-       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-screen   ">
+       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8   ">
     <h2 className="font-akshar text-4xl font-extrabold text-gray-900 text-center mb-10 z-50">Professional Skills</h2>
     
    
@@ -732,8 +733,8 @@ return(
 
 
   <section className=" items-center justify-center  text-center overflow-hidden">
-  <div className='w-screen'>
-   <h1 className='font-akshar sm:text-6xl text-2xl font-extrabold w-screen'>Here's my current ecommerce project.</h1>
+  <div className=''>
+   <h1 className='font-akshar sm:text-6xl text-2xl font-extrabold '>Here's my current ecommerce project.</h1>
   </div>
   
           <div  className=" carousel   w-[4800px]  h-screen flex flex-nowrap overflow-hidden">
@@ -839,11 +840,11 @@ return(
 
 
   <section className="panel purple flex flex-col h-screen justify-center items-center w-full ">
-  <div className='grid grid-cols-1  text-center content-center  place-items-center px-64' >
+  <div className='grid grid-cols-1  text-center content-center  place-items-center ' >
     <span className="line line-3"></span>
-    <span className=" text-6xl font-akshar font-semibold" >
+    <span className="  w-1/2 sm:text-4xl text-sm font-akshar font-semibold" >
 
-There are many more projects to show. This website itself was built using the GSAP library. If you'd like something like this, please don't hesitate to contact me.
+There are other more projects to show. This website itself was built using the GSAP library. If you'd like something like this, please don't hesitate to contact me.
     </span>
   </div>
   </section>
@@ -851,7 +852,7 @@ There are many more projects to show. This website itself was built using the GS
 
 
 <section className="panel gray h-screen flex flex-col justify-center items-center">
-    <span className=" text-8xl font-akshar font-extrabold" >
+    <span className=" sm:text-8xl text-lg font-akshar font-extrabold" >
 
     Let's talk about your plan!
     </span>
