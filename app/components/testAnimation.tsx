@@ -14,6 +14,7 @@ import Navbar from './header';
 import { Progress } from "flowbite-react";
 import { Button } from 'flowbite-react';
 import ScrollCarousel from '../components/carousel';
+import Link from 'next/link';
 
 // const runTyping = () => {
 //   var tl = gsap.timeline({
@@ -313,9 +314,10 @@ const TestAnimation = () => {
             stagger: 1
             });
                tlCarousel.from(".carousel", {translateX: "-100%", duration: 500, stagger: 1},0)
-            .to(".carousel", {translateX: 0, duration: 500, stagger: 1}, 1);
+            .to(".carousel", {translateX: 0, duration: 2500, stagger: 1}, 1);
 
 
+            
           // gsap.from(".line-1", {
           //   scrollTrigger: {
           //     trigger: ".red",
@@ -330,6 +332,21 @@ const TestAnimation = () => {
           //   stagger: 1
           // });
           
+              var tlCarousel2 = gsap.timeline({
+              scrollTrigger: {
+                trigger: ".carousel2",
+                
+                scrub: true,
+                pin: true,
+                start: "top top",
+                end: "150%"
+              },
+             
+            ease: "slow",
+            stagger: 1
+            });
+               tlCarousel2.from(".carousel2", {translateX: "+100%", duration: 500, stagger: 1},0)
+            .to(".carousel2", {translateX: "-50%", duration: 1500, stagger: 1}, 1);
 
           // --- PURPLE/GREEN PANEL ---
           var tl = gsap.timeline({
@@ -420,7 +437,7 @@ return(
              
 
 
-    <section className="panel orange text-gray-900 md:grid md:grid-cols-2 hidden h-screen justify-center items-center -z-10 ">
+    <section className="panel orange text-gray-900 md:grid md:grid-cols-2 hidden h-screen justify-center items-center -z-30 ">
      
       <div className='text-center  md:col-span-1 col-span-1   flex items-center justify-center'>
         {/* <Image
@@ -509,7 +526,7 @@ return(
     </div>
   </section>
  
-    <section className="flex items-center justify-center sm:h-screen  py-5  description panel blue text-center  professionalSec">
+    <section className="flex items-center justify-center sm:h-screen  py-5  description panel blue text-center  professionalSec z-40">
       {/* <Image
                                             src={`/cb.png`}
                                             // loader={imageLoader}
@@ -718,24 +735,39 @@ return(
 
   <section className=" items-center justify-center  text-center overflow-hidden">
   <div className=''>
-   <h1 className='font-akshar sm:text-6xl text-2xl font-extrabold'>Here's my current ecommerce project.</h1>
+   <h1 className='font-akshar sm:text-6xl text-2xl font-extrabold'>My Personal project.</h1>
+   <p className='font-akshar sm:text-md text-2xl pt-10'>A working eCommerce app that still requires significant development.</p>
   </div>
   
-          <div  className=" carousel   w-[4800px]  h-screen flex flex-nowrap overflow-hidden">
+          <div  className=" carousel   sm:w-[4500px] w-[2000px]  h-screen flex flex-nowrap overflow-hidden justify-evenly">
       {/* Example Carousel Items (Panels) */}
-      <div className="panelo  w-[800px]   flex items-center justify-center text-4xl overflow-hidden">
+      <div className="panelo  w-[600px]   flex items-center justify-center text-4xl overflow-hidden">
           
           <Image
-                                            src={`/mobileDepotCart.jpg`}
+                                            src={`/mobileAppDepot2.png`}
                                             // loader={imageLoader}
-                                            width={300}
-                                            height={100}
+                                            width={800}
+                                            height={500}
                                            quality={100}
                                             alt="Picture"
-                                            className="  absolute z-50 shadow-2xl "
+                                            className=" sm:w-[800px] w-[300px]  absolute  "
                                         />
+                                     
       </div>
-      <div className="panelo w-[800px]    flex items-center justify-center text-4xl  ">
+            <div className="panelo  w-[600px]   flex items-center justify-center text-4xl overflow-hidden">
+          
+          <Image
+                                            src={`/productpage.png`}
+                                            // loader={imageLoader}
+                                            width={500}
+                                            height={500}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="sm:w-[500px] w-[300px]  absolute  "
+                                        />
+                                     
+      </div>
+      {/* <div className="panelo w-[600px]    flex items-center justify-center text-4xl  ">
            
           <Image
                                             src={`/mobileDepotProd.jpg`}
@@ -747,7 +779,7 @@ return(
                                             className="  absolute z-50 shadow-2xl "
                                         />
       </div>
-      <div className="panelo w-[800px]    flex items-center justify-center text-4xl ">
+      <div className="panelo w-[600px]    flex items-center justify-center text-4xl ">
              <Image
                                             src={`/mobileDepot.jpg`}
                                             // loader={imageLoader}
@@ -757,45 +789,47 @@ return(
                                             alt="Picture"
                                             className="  absolute z-50 shadow-2xl "
                                         />
-      </div>
-      <div className="panelo w-[800px]    flex items-center justify-center text-4xl ">
+      </div> */}
+      <div className="panelo w-[600px]    flex items-center justify-center text-4xl ">
          <Image
-                                            src={`/cartDepot.png`}
+                                            src={`/DepotCart.png`}
                                             // loader={imageLoader}
                                             width={800}
-                                            height={400}
+                                            height={500}
                                            quality={100}
                                             alt="Picture"
-                                            className="  absolute z-50 shadow-2xl "
+                                            className=" sm:w-[800px] w-[300px] absolute   "
                                         />
       </div>
-      <div className="panelo w-[800px]    flex items-center justify-center text-4xl ">
+      <div className="panelo w-[600px]    flex items-center justify-center text-4xl ">
          <Image
-                                            src={`/depotProduct.png`}
+                                            src={`/DepotCart2.png`}
                                             // loader={imageLoader}
-                                            width={500}
-                                            height={400}
+                                            width={800}
+                                            height={500}
                                            quality={100}
                                             alt="Picture"
-                                            className="  absolute z-50 shadow-2xl "
+                                            className=" sm:w-[800px] w-[300px] absolute   "
                                         />
       </div>
-         <div className="panelo w-[800px]    flex items-center justify-center text-4xl ">
+         <div className="panelo w-[600px]    flex items-center justify-center text-4xl ">
         
                                                <Image
-                                            src={`/depot.png`}
+                                            src={`/depotMainPage.png`}
                                             // loader={imageLoader}
-                                            width={600}
-                                            height={600}
+                                            width={800}
+                                            height={500}
                                            quality={100}
                                             alt="Picture"
-                                            className="  absolute z-50 shadow-2xl "
+                                            className="sm:w-[800px] w-[300px]  absolute   "
                                         />
       </div>
     </div>
     
 
 
+        
+{/* <a >https://next-js-v13-template-2023.vercel.app/</a> */}
       {/* <div className='grid grid-cols-2  h-screen'>
         <div className='flex justify-center items-center col-span-1'>
                 <Image
@@ -809,20 +843,66 @@ return(
                                         />
         </div>
       </div> */}
-
+      <div className='flex items-center justify-center pb-64'>
+    <a  href="https://next-js-v13-template-2023.vercel.app/" 
+            target="_blank" rel="noopener noreferrer">
+        <div className='flex items-center justify-center bg-black rounded-full px-5'>
+          
+          
+                                                       <svg className=" mr-4 w-28 h-14 text-white  " version="1.2" baseProfile="tiny" id="Layer_1"
+                                x="0px" y="0px" viewBox="0 0 190 73">
+                                <path fill="none" strokeWidth="3" stroke="#fff" strokeMiterlimit="10" d="M155.7,23.5l-1.6-1.6l-2.8,2.8l-2.9-2.9l-2.8,2.9l-2.9-2.9l-2.5,2.6
+	l-2.6-2.7l-2.8,2.8l-2.9-2.9l-2.7,2.7c0.9-7.5,6.5-13.3,13.3-13.3C149,11,154.5,16.4,155.7,23.5z"/>
+                                {/* <path fill="#fff" d="M-2.6,18.2" /> */}
+                                <polyline fill="#fff" points="30.9,2.3 30.9,55.6 40.4,55.6 40.4,2.3 35.6,2.3 " />
+                                <polyline fill="#fff" points="167.4,3.1 167.4,53.5 176.1,53.5 176.1,3.1 171.8,3.1 " />
+                                <path fill="#fff" d="M187.3,55.5l0.1-11.6h-3.5c-1.1,0-2,0.8-2,1.9l-0.1,9.7h2.8" />
+                                <polyline fill="#fff" points="160.7,32.9 188.5,32.9 188.5,23.2 160.7,23.2 160.7,28.1 " />
+                                <polyline fill="#fff" points="167.4,55.8 187.3,55.8 187.3,47.6 167.4,47.6 167.4,51.7 " />
+                                <polyline fill="#fff" points="45.6,28.7 45.6,47.8 52.6,47.8 52.6,28.7 49.1,28.7 " />
+                                <polyline fill="#fff" points="45.6,47 45.6,55.4 52.6,55.4 52.6,47 49.1,47 " />
+                                <polyline fill="#fff" points="46,32.9 84.7,32.9 84.7,27.1 46,27.1 46,30 " />
+                                <polyline fill="#fff" points="43,26 47,32.2 49.1,31.1 45.2,24.9 44.1,25.4 " />
+                                <polyline fill="#fff" points="45.6,47.2 77.7,47.2 77.7,41.2 45.6,41.2 45.6,44.2 " />
+                                <polyline fill="#fff" points="45.9,55.4 81.3,55.4 81.3,51.7 45.9,51.7 45.9,53.5 " />
+                                <polyline fill="#fff" points="63.7,44.6 63.7,30 62.8,30 62.8,44.6 63.2,44.6 " />
+                                <polyline fill="#fff" points="69,44.4 69,29.7 68.1,29.7 68.1,44.4 68.6,44.4 " />
+                                <polyline fill="#fff" points="58.1,44.6 58.1,30 57.1,30 57.1,44.6 57.7,44.6 " />
+                                <polyline fill="#fff" points="74,36.6 51.8,36.6 51.8,37.5 74,37.5 74,37 " />
+                                <ellipse fill="none" stroke="#fff" strokeWidth="8" strokeMiterlimit="10" cx="19.4" cy="37" rx="14" ry="15.4" />
+                                <path fill="#fff" d="M128.1,57.9L128.1,57.9z" />
+                                <polyline fill="#fff" points="95.7,71.7 95.7,21.6 86,21.6 86,71.7 90.8,71.7 " />
+                                <ellipse fill="none" stroke="#fff" strokeWidth="8" strokeMiterlimit="10" cx="106.9" cy="38.3" rx="14" ry="14" />
+                                <polygon fill="#fff" points="77.7,47.2 84.7,32.9 73.5,32.9 73.7,46.8 " />
+                                <ellipse fill="none" stroke="#fff" strokeWidth="3" strokeMiterlimit="10" cx="50.1" cy="59.2" rx="2.5" ry="2.3" />
+                                <ellipse fill="none" stroke="#fff" strokeWidth="3" strokeMiterlimit="10" cx="74.7" cy="59.2" rx="2.5" ry="2.3" />
+                                <ellipse fill="none" stroke="#fff" strokeMiterlimit="10" cx="43.4" cy="24.4" rx="1.2" ry="1.1" />
+                                <path fill="#004a9f" stroke="#fff" strokeWidth="2" strokeMiterlimit="10" d="M156.9,24.7l-1.2-1.2l-1.6-1.6l-2.8,2.8l-2.9-2.9l-2.8,2.9l-2.9-2.9
+	l-2.5,2.6l-2.6-2.7l-2.8,2.8l-2.9-2.9l-3,3l-3.2-3v30.5c0,2.5,2.1,4.6,4.6,4.6h24.3c2.6,0,4.6-2,4.6-4.6V22L156.9,24.7z M142.5,51.8
+	c-6.3,0-11.4-5.1-11.4-11.5c0-1.6,0.3-3.1,0.9-4.5c1.7-4.1,5.8-7,10.5-7s8.8,2.9,10.5,7c0.6,1.4,0.9,2.9,0.9,4.5
+	C153.9,46.7,148.8,51.8,142.5,51.8z"/>
+                            </svg>
+                         
+       
+        <p className=' text-white font-akshar'>Visit the website.</p>
+        </div>
+  </a>
+      </div>
     {/* <span className="line line-1 w-full col-span-2"></span>
     <p className="w-full col-span-2">
 
     This line's animation will begin when it enters the viewport and finish when its top edge hits the top of the viewport, staying perfectly in sync with the scrollbar because it has <code>scrub:&nbsp;true</code>
+    
     </p> */}
 
   
   </section>
 
+
   
 
 
-  <section className="panel purple flex flex-col h-screen justify-center items-center w-full ">
+  {/* <section className="panel purple flex flex-col h-screen justify-center items-center w-full ">
   <div className='grid grid-cols-1  text-center content-center  place-items-center ' >
     <span className="line line-3"></span>
     <span className="  w-1/2 sm:text-4xl text-sm font-akshar font-semibold" >
@@ -830,9 +910,136 @@ return(
 There are other more projects to show. This website itself was built using the GSAP library. If you'd like something like this, please don't hesitate to contact me.
     </span>
   </div>
+  </section> */}
+
+<section className=" items-center justify-center  text-center overflow-hidden ">
+  <div className=''>
+   <h1 className='font-akshar sm:text-6xl text-2xl font-extrabold'>Here's an application for a small firm.</h1>
+   <p className='font-akshar sm:text-md text-2xl pt-10 sm:m-24'>The application provides transaction management, reporting, mobile application for data entry, and automated calculations to help prevent discrepancies when using spreadsheets.</p>
+  </div>
+  
+          <div  className=" carousel2   sm:w-[2500px] w-[100px]  h-screen flex flex-nowrap overflow-hidden justify-evenly">
+      {/* Example Carousel Items (Panels) */}
+      <div className="panelo  w-[600px]   flex items-center justify-center text-4xl overflow-hidden">
+          
+          <Image
+                                            src={`/pjcc/1.png`}
+                                            // loader={imageLoader}
+                                            width={400}
+                                            height={200}
+                                           quality={100}
+                                            alt="Picture"
+                                            className=" sm:w-[400px] w-[200px] absolute  "
+                                        />
+                                     
+      </div>
+      {/* <div className="panelo w-[600px]    flex items-center justify-center text-4xl  ">
+           
+          <Image
+                                            src={`/mobileDepotProd.jpg`}
+                                            // loader={imageLoader}
+                                            width={300}
+                                            height={100}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="  absolute z-50 shadow-2xl "
+                                        />
+      </div>
+      <div className="panelo w-[600px]    flex items-center justify-center text-4xl ">
+             <Image
+                                            src={`/mobileDepot.jpg`}
+                                            // loader={imageLoader}
+                                            width={300}
+                                            height={100}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="  absolute z-50 shadow-2xl "
+                                        />
+      </div> */}
+      <div className="panelo w-[600px]    flex items-center justify-center text-4xl ">
+         <Image
+                                            src={`/pjcc/2.png`}
+                                            // loader={imageLoader}
+                                            width={400}
+                                            height={200}
+                                           quality={100}
+                                            alt="Picture"
+                                            className=" sm:w-[400px] w-[200px] absolute   "
+                                        />
+      </div>
+      <div className="panelo w-[600px]    flex items-center justify-center text-4xl ">
+         <Image
+                                            src={`/pjcc/3.png`}
+                                            // loader={imageLoader}
+                                            width={1000}
+                                            height={1000}
+                                           quality={100}
+                                            alt="Picture"
+                                            className=" sm:w-[1000px] w-[500px] absolute   "
+                                        />
+      </div>
+         {/* <div className="panelo w-[600px]    flex items-center justify-center text-4xl ">
+        
+                                               <Image
+                                            src={`/depotMainPage.png`}
+                                            // loader={imageLoader}
+                                            width={800}
+                                            height={500}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="  absolute   "
+                                        />
+      </div> */}
+    </div>
+    
+
+
+        
+{/* <a >https://next-js-v13-template-2023.vercel.app/</a> */}
+      {/* <div className='grid grid-cols-2  h-screen'>
+        <div className='flex justify-center items-center col-span-1'>
+                <Image
+                                            src={`/depot.png`}
+                                            // loader={imageLoader}
+                                            width={1000}
+                                            height={1000}
+                                           quality={100}
+                                            alt="Picture"
+                                            className=" w-1/3  absolute z-50 shadow-2xl "
+                                        />
+        </div>
+      </div> */}
+      <div className='flex items-center justify-center  '>
+    <a  href="https://pjccwebnextjs.vercel.app/signin" 
+            target="_blank" rel="noopener noreferrer">
+        <div className='flex items-center justify-center px-5'>
+           <Image
+                                            src={` https://res.cloudinary.com/dbkhak42n/image/upload/v1664550319/pjcc_byanzl.png`}
+                                            // loader={imageLoader}
+                                            width={200}
+                                            height={200}
+                                           quality={100}
+                                            alt="Picture"
+                                            className=" z-50  "
+                                        />
+          
+                             
+                         
+       
+        
+        </div>
+        <p className=' '>Visit the website, However main function of the application is prohibited.</p>
+  </a>
+      </div>
+    {/* <span className="line line-1 w-full col-span-2"></span>
+    <p className="w-full col-span-2">
+
+    This line's animation will begin when it enters the viewport and finish when its top edge hits the top of the viewport, staying perfectly in sync with the scrollbar because it has <code>scrub:&nbsp;true</code>
+    
+    </p> */}
+
+  
   </section>
-
-
 
 <section className="panel gray h-screen flex flex-col justify-center items-center">
     <span className=" sm:text-8xl text-lg font-akshar font-extrabold" >
