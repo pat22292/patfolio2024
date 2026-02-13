@@ -754,7 +754,7 @@ return(
 
    <div className=' sm:mx-auto sm:flex grid grid-cols-2  sm:max-w-max origin-center items-center sm:gap-8 sm:px-6 px-16  lg:px-8  '>
    <Image
-                                            src={`/technologieslogo/laravel.png `}
+                                            src={`/technologieslogo/laravelApp.png`}
                                             // loader={imageLoader}
                                             width={200}
                                             height={200}
@@ -998,7 +998,7 @@ There are other more projects to show. This website itself was built using the G
    <p className='font-akshar sm:text-md text-2xl pt-10 sm:m-24'>The application provides transaction management, reporting, mobile application for data entry, and automated calculations to help prevent discrepancies when using spreadsheets.</p>
    <div className=' sm:mx-auto sm:px-6 px-16 sm:flex grid grid-cols-2  sm:max-w-max origin-center items-center sm:gap-8  lg:px-8  '>
    <Image
-                                            src={`/technologieslogo/laravel.png `}
+                                            src={`/technologieslogo/laravelApp.png`}
                                             // loader={imageLoader}
                                             width={200}
                                             height={200}
