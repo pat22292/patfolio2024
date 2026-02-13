@@ -119,7 +119,8 @@ const TestAnimation = () => {
               // pin: true,
               start: "top top",
             },
-            duration: 500,
+            duration: 1500,
+             ease: "slow",
             text: "I can be your",
             stagger: 1
           });
@@ -311,10 +312,10 @@ const TestAnimation = () => {
               },
              
             ease: "slow",
-            stagger: 1
+         
             });
-               tlCarousel.from(".carousel", {translateX: "-100%", duration: 500, stagger: 1},0)
-            .to(".carousel", {translateX: 0, duration: 2500, stagger: 1}, 1);
+               tlCarousel.from(".carousel", {translateX: "-70%", duration: 500, stagger: 1},1)
+            .to(".carousel", {translateX: 0, duration: 500, stagger: 1}, 1);
 
 
             
@@ -332,6 +333,8 @@ const TestAnimation = () => {
           //   stagger: 1
           // });
           
+
+
               var tlCarousel2 = gsap.timeline({
               scrollTrigger: {
                 trigger: ".carousel2",
@@ -341,12 +344,21 @@ const TestAnimation = () => {
                 start: "top top",
                 end: "150%"
               },
-             
+            
             ease: "slow",
-            stagger: 1
+           
             });
-               tlCarousel2.from(".carousel2", {translateX: "+100%", duration: 500, stagger: 1},0)
-            .to(".carousel2", {translateX: "-50%", duration: 1500, stagger: 1}, 1);
+
+            if (ScrollTrigger.isTouch === 1) {
+                tlCarousel2.from(".carousel2", {translateX: "+100%", duration: 500, stagger: 1},1)
+            .to(".carousel2", {translateX: "-58%", duration: 500, stagger: 1}, 1);
+            }
+            else {
+                tlCarousel2.from(".carousel2", {translateX: "+70%", duration: 500, stagger: 1},1)
+            .to(".carousel2", {translateX: 0, duration: 500, stagger: 1}, 1);
+            }
+
+  
 
           // --- PURPLE/GREEN PANEL ---
           var tl = gsap.timeline({
@@ -739,7 +751,7 @@ return(
    <p className='font-akshar sm:text-md text-2xl pt-10'>A working eCommerce app that still requires significant development.</p>
   </div>
   
-          <div  className=" carousel   sm:w-[4500px] w-[2000px]  h-screen flex flex-nowrap overflow-hidden justify-evenly">
+          <div  className=" carousel   sm:w-[4000px] w-[2000px]  h-screen flex flex-nowrap overflow-hidden justify-evenly">
       {/* Example Carousel Items (Panels) */}
       <div className="panelo  w-[600px]   flex items-center justify-center text-4xl overflow-hidden">
           
@@ -798,18 +810,18 @@ return(
                                             height={500}
                                            quality={100}
                                             alt="Picture"
-                                            className=" sm:w-[800px] w-[300px] absolute   "
+                                            className=" sm:w-[800px] w-[400px] absolute   "
                                         />
       </div>
       <div className="panelo w-[600px]    flex items-center justify-center text-4xl ">
          <Image
-                                            src={`/DepotCart2.png`}
+                                            src={`/depotCartside.png`}
                                             // loader={imageLoader}
                                             width={800}
                                             height={500}
                                            quality={100}
                                             alt="Picture"
-                                            className=" sm:w-[800px] w-[300px] absolute   "
+                                            className=" sm:w-[800px] w-[400px] absolute   "
                                         />
       </div>
          <div className="panelo w-[600px]    flex items-center justify-center text-4xl ">
@@ -821,7 +833,7 @@ return(
                                             height={500}
                                            quality={100}
                                             alt="Picture"
-                                            className="sm:w-[800px] w-[300px]  absolute   "
+                                            className="sm:w-[800px] w-[400px]  absolute   "
                                         />
       </div>
     </div>
@@ -918,53 +930,31 @@ There are other more projects to show. This website itself was built using the G
    <p className='font-akshar sm:text-md text-2xl pt-10 sm:m-24'>The application provides transaction management, reporting, mobile application for data entry, and automated calculations to help prevent discrepancies when using spreadsheets.</p>
   </div>
   
-          <div  className=" carousel2   sm:w-[2500px] w-[100px]  h-screen flex flex-nowrap overflow-hidden justify-evenly">
+          <div  className=" carousel2   sm:w-[1900px] w-[900px]  h-screen flex flex-nowrap overflow-hidden justify-evenly">
       {/* Example Carousel Items (Panels) */}
-      <div className="panelo  w-[600px]   flex items-center justify-center text-4xl overflow-hidden">
+      <div className="panelo  w-[400px]   flex items-center justify-center text-4xl overflow-hidden">
           
           <Image
                                             src={`/pjcc/1.png`}
                                             // loader={imageLoader}
-                                            width={400}
+                                            width={300}
                                             height={200}
                                            quality={100}
                                             alt="Picture"
-                                            className=" sm:w-[400px] w-[200px] absolute  "
+                                            className=" sm:w-[300px] w-[200px] absolute  "
                                         />
                                      
       </div>
-      {/* <div className="panelo w-[600px]    flex items-center justify-center text-4xl  ">
-           
-          <Image
-                                            src={`/mobileDepotProd.jpg`}
-                                            // loader={imageLoader}
-                                            width={300}
-                                            height={100}
-                                           quality={100}
-                                            alt="Picture"
-                                            className="  absolute z-50 shadow-2xl "
-                                        />
-      </div>
-      <div className="panelo w-[600px]    flex items-center justify-center text-4xl ">
-             <Image
-                                            src={`/mobileDepot.jpg`}
-                                            // loader={imageLoader}
-                                            width={300}
-                                            height={100}
-                                           quality={100}
-                                            alt="Picture"
-                                            className="  absolute z-50 shadow-2xl "
-                                        />
-      </div> */}
-      <div className="panelo w-[600px]    flex items-center justify-center text-4xl ">
+
+      <div className="panelo w-[400px]    flex items-center justify-center text-4xl ">
          <Image
                                             src={`/pjcc/2.png`}
                                             // loader={imageLoader}
-                                            width={400}
+                                            width={300}
                                             height={200}
                                            quality={100}
                                             alt="Picture"
-                                            className=" sm:w-[400px] w-[200px] absolute   "
+                                            className=" sm:w-[300px] w-[200px] absolute   "
                                         />
       </div>
       <div className="panelo w-[600px]    flex items-center justify-center text-4xl ">
@@ -978,18 +968,7 @@ There are other more projects to show. This website itself was built using the G
                                             className=" sm:w-[1000px] w-[500px] absolute   "
                                         />
       </div>
-         {/* <div className="panelo w-[600px]    flex items-center justify-center text-4xl ">
-        
-                                               <Image
-                                            src={`/depotMainPage.png`}
-                                            // loader={imageLoader}
-                                            width={800}
-                                            height={500}
-                                           quality={100}
-                                            alt="Picture"
-                                            className="  absolute   "
-                                        />
-      </div> */}
+ 
     </div>
     
 
@@ -1014,7 +993,7 @@ There are other more projects to show. This website itself was built using the G
             target="_blank" rel="noopener noreferrer">
         <div className='flex items-center justify-center px-5'>
            <Image
-                                            src={` https://res.cloudinary.com/dbkhak42n/image/upload/v1664550319/pjcc_byanzl.png`}
+                                            src={`/pjcc_byanzl.png`}
                                             // loader={imageLoader}
                                             width={200}
                                             height={200}
@@ -1028,7 +1007,7 @@ There are other more projects to show. This website itself was built using the G
        
         
         </div>
-        <p className=' '>Visit the website, However main function of the application is prohibited.</p>
+        <p className='font-akshar sm:text-md text-2xl p-10 '>Visit the website, However main function of the application is prohibited.</p>
   </a>
       </div>
     {/* <span className="line line-1 w-full col-span-2"></span>
