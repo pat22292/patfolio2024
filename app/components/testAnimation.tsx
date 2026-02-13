@@ -426,7 +426,7 @@ return(
                                             height={1000}
                                            quality={100}
                                             alt="Picture"
-                                            className=" h-screen absolute my-image-sm opacity-10 z-0"
+                                            className=" w-screen h-screen absolute my-image-sm opacity-10 z-0"
                                         />
        <DotLottieReact
       src="Mouse Scroll Down.json"

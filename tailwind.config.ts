@@ -8,7 +8,8 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/flowbite-react/**/*.js",
-    ".flowbite-react\\class-list.json"
+    ".flowbite-react\\class-list.json",
+    ".flowbite-react/class-list.json"
   ],
   theme: {
     extend: {
