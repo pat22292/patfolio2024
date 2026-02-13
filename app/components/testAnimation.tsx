@@ -417,26 +417,10 @@ return(
     <>
     <div  ref={ref}>
       <Navbar/>
-     
-      <div className='fixed flex justify-center items-end h-screen  w-screen z-40 '>
-              <Image
-                                            src={`/cb.png`}
-                                            // loader={imageLoader}
-                                            width={1000}
-                                            height={1000}
-                                           quality={100}
-                                            alt="Picture"
-                                            className=" w-screen h-screen absolute my-image-sm opacity-10 z-0"
-                                        />
-       <DotLottieReact
-      src="Mouse Scroll Down.json"
-      loop
-      autoplay
-      className='w-64  mb-10 opacity-50'
-    />
-      </div>
+             
 
-    <section className="panel orange text-gray-900 md:grid md:grid-cols-2 hidden h-screen justify-center items-center">
+
+    <section className="panel orange text-gray-900 md:grid md:grid-cols-2 hidden h-screen justify-center items-center -z-10 ">
      
       <div className='text-center  md:col-span-1 col-span-1   flex items-center justify-center'>
         {/* <Image
@@ -525,7 +509,7 @@ return(
     </div>
   </section>
  
-    <section className="flex items-center justify-center sm:h-screen  py-5  description panel blue text-center  professionalSec z-50">
+    <section className="flex items-center justify-center sm:h-screen  py-5  description panel blue text-center  professionalSec">
       {/* <Image
                                             src={`/cb.png`}
                                             // loader={imageLoader}
@@ -536,12 +520,12 @@ return(
                                             className=" w-screen h-screen absolute opacity-10 z-10"
                                         /> */}
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8   ">
-    <h2 className="font-akshar text-4xl font-extrabold text-gray-900 text-center mb-10 z-50">Professional Skills</h2>
+    <h2 className="font-akshar text-4xl font-extrabold text-gray-900 text-center mb-10 ">Professional Skills</h2>
     
    
     <div className="grid   grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-      <div className=" p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+      <div className=" bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
         <div className="text-patcolor mb-4">
        
           <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
@@ -835,7 +819,6 @@ return(
   
   </section>
 
-
   
 
 
@@ -857,8 +840,6 @@ There are other more projects to show. This website itself was built using the G
     Let's talk about your plan!
     </span>
 </section>
-
-
 
 
 
