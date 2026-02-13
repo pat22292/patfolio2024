@@ -734,7 +734,7 @@ return(
 
   <section className=" items-center justify-center  text-center overflow-hidden">
   <div className=''>
-   <h1 className='font-akshar sm:text-6xl text-2xl font-extrabold '>Here's my current ecommerce project.</h1>
+   <h1 className='font-akshar sm:text-6xl text-2xl font-extrabold'>Here's my current ecommerce project.</h1>
   </div>
   
           <div  className=" carousel   w-[4800px]  h-screen flex flex-nowrap overflow-hidden">
