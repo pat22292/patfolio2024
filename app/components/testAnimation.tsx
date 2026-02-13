@@ -745,13 +745,81 @@ return(
   </section>
 
 
-  <section className=" items-center justify-center  text-center overflow-hidden">
-  <div className=''>
+  <section className=" items-center justify-center  text-center overflow-hidden ">
+  <div className='flex flex-col'>
    <h1 className='font-akshar sm:text-6xl text-2xl font-extrabold'>My Personal project.</h1>
    <p className='font-akshar sm:text-md text-2xl pt-10'>A working eCommerce app that still requires significant development.</p>
+   
   </div>
-  
-          <div  className=" carousel   sm:w-[4000px] w-[2000px]  h-screen flex flex-nowrap overflow-hidden justify-evenly">
+
+   <div className=' sm:mx-auto sm:flex grid grid-cols-2  sm:max-w-max origin-center items-center sm:gap-8 sm:px-6 px-16  lg:px-8  '>
+   <Image
+                                            src={`/technologieslogo/laravel.png `}
+                                            // loader={imageLoader}
+                                            width={200}
+                                            height={200}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="  filter grayscale opacity-50"
+                                        />
+                                            <Image
+                                            src={`/technologieslogo/logo-landscape.png`}
+                                            // loader={imageLoader}
+                                            width={200}
+                                            height={200}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="filter grayscale opacity-50 "
+                                        />
+                                                <Image
+                                            src={`/technologieslogo/pngwing.com.png`}
+                                            // loader={imageLoader}
+                                            width={100}
+                                            height={100}
+                                           quality={100}
+                                            alt="Picture"
+                                            className=" filter grayscale opacity-50"
+                                        />
+                                     
+    <Image
+                                            src={`/technologieslogo/Next.js.png`}
+                                            // loader={imageLoader}
+                                            width={100}
+                                            height={100}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="filter grayscale opacity-50 "
+                                        />
+                                            <Image
+                                            src={`/technologieslogo/tailwind.png`}
+                                            // loader={imageLoader}
+                                            width={200}
+                                            height={200}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="filter grayscale opacity-50 "
+                                        />
+                                                  <Image
+                                            src={`/technologieslogo/cover_jepack_compose.png`}
+                                            // loader={imageLoader}
+                                            width={200}
+                                            height={200}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="filter grayscale opacity-50 "
+                                        />
+                                                  <Image
+                                            src={`/technologieslogo/kotlin-2-logo-png-transparent.png`}
+                                            // loader={imageLoader}
+                                            width={200}
+                                            height={200}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="filter grayscale opacity-50 "
+                                        />
+
+   </div>
+          <div  className=" carousel   sm:w-[4000px] w-[2000px]  flex flex-nowrap overflow-hidden justify-evenly h-screen">
       {/* Example Carousel Items (Panels) */}
       <div className="panelo  w-[600px]   flex items-center justify-center text-4xl overflow-hidden">
           
@@ -928,6 +996,74 @@ There are other more projects to show. This website itself was built using the G
   <div className=''>
    <h1 className='font-akshar sm:text-6xl text-2xl font-extrabold'>Here's an application for a small firm.</h1>
    <p className='font-akshar sm:text-md text-2xl pt-10 sm:m-24'>The application provides transaction management, reporting, mobile application for data entry, and automated calculations to help prevent discrepancies when using spreadsheets.</p>
+   <div className=' sm:mx-auto sm:px-6 px-16 sm:flex grid grid-cols-2  sm:max-w-max origin-center items-center sm:gap-8  lg:px-8  '>
+   <Image
+                                            src={`/technologieslogo/laravel.png `}
+                                            // loader={imageLoader}
+                                            width={200}
+                                            height={200}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="  filter grayscale opacity-50"
+                                        />
+                                            <Image
+                                            src={`/technologieslogo/logo-landscape.png`}
+                                            // loader={imageLoader}
+                                            width={200}
+                                            height={200}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="filter grayscale opacity-50 "
+                                        />
+                                                <Image
+                                            src={`/technologieslogo/pngwing.com.png`}
+                                            // loader={imageLoader}
+                                            width={100}
+                                            height={100}
+                                           quality={100}
+                                            alt="Picture"
+                                            className=" filter grayscale opacity-50"
+                                        />
+                                     
+    <Image
+                                            src={`/technologieslogo/Next.js.png`}
+                                            // loader={imageLoader}
+                                            width={100}
+                                            height={100}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="filter grayscale opacity-50 "
+                                        />
+                                            <Image
+                                            src={`/technologieslogo/tailwind.png`}
+                                            // loader={imageLoader}
+                                            width={200}
+                                            height={200}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="filter grayscale opacity-50 "
+                                        />
+                                                  <Image
+                                            src={`/technologieslogo/cover_jepack_compose.png`}
+                                            // loader={imageLoader}
+                                            width={200}
+                                            height={200}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="filter grayscale opacity-50 "
+                                        />
+                                                  <Image
+                                            src={`/technologieslogo/kotlin-2-logo-png-transparent.png`}
+                                            // loader={imageLoader}
+                                            width={200}
+                                            height={200}
+                                           quality={100}
+                                            alt="Picture"
+                                            className="filter grayscale opacity-50 "
+                                        />
+
+   </div>
+ 
   </div>
   
           <div  className=" carousel2   sm:w-[1900px] w-[900px]  h-screen flex flex-nowrap overflow-hidden justify-evenly">
