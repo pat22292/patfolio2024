@@ -25,7 +25,8 @@ const config: Config = {
     },
    
       fontFamily: {
-        'akshar': ['Akshar', 'sans-serif'],
+        // 'akshar': ['Akshar', 'sans-serif'],
+        sans: ['var(--font-akshar)', 'sans-serif'],
     
       }
     

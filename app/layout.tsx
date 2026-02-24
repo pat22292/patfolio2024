@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Akshar } from 'next/font/google';
 import "./globals.css";
 import { ThemeInit } from "../.flowbite-react/init";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'] });
+
+const akshar = Akshar({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'], // Specify necessary weights
+  variable: '--font-akshar', // Define CSS variable
+});
 
 export const metadata: Metadata = {
   title: "Patrick Madlang-awa",
@@ -16,9 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html  lang="en"  >
+    <html  lang="en" className={`${inter.className} ${akshar.variable} antialiased`}>
       <ThemeInit />
-      <body suppressHydrationWarning={true} className={inter.className}>{children}</body>
+      <body suppressHydrationWarning={true} 
+      // className={inter.className}
+      className={`${inter.className} ${akshar.variable} antialiased`}
+      >{children}</body>
     </html>
   );
 }

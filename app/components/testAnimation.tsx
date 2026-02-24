@@ -475,9 +475,9 @@ return(
 
     <div className='whole-text  h-screen flex items-center justify-center  '>
     
-      <h1 className='text-8xl font-akshar  font-extrabold  drop-shadow-xl md:inline-block hidden'>
-        <span className="greetext font-akshar text-8xl font-extrabold "> Hi! I'm Patrick.</span>
-         <span className="textKo font-akshar text-8xl font-extrabold ">  </span>
+      <h1 className='text-8xl font-akshar     font-black  drop-shadow-xl md:inline-block hidden'>
+        <span className="greetext font-akshar text-8xl   font-black "> Hi! I'm Patrick.</span>
+         <span className="textKo font-akshar text-8xl   font-black ">  </span>
       <span className="blinking-cursor">|</span>
       </h1>
     
