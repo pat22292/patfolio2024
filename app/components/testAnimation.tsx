@@ -752,7 +752,7 @@ return(
    
   </div>
 
-   <div className=' sm:mx-auto sm:flex grid grid-cols-2  sm:max-w-max origin-center items-center sm:gap-8 sm:px-6 px-16  lg:px-8  '>
+   <div className=' sm:mx-auto sm:flex grid grid-cols-2  sm:max-w-max origin-center items-center sm:gap-2 sm:px-6 px-16  lg:px-8  '>
    <Image
                                             src={`/technologieslogo/laravelApp.png`}
                                             // loader={imageLoader}
@@ -996,7 +996,7 @@ There are other more projects to show. This website itself was built using the G
   <div className=''>
    <h1 className='font-akshar sm:text-6xl text-2xl font-extrabold'>Here's an application for a small firm.</h1>
    <p className='font-akshar sm:text-md text-2xl pt-10 sm:m-24'>The application provides transaction management, reporting, mobile application for data entry, and automated calculations to help prevent discrepancies when using spreadsheets.</p>
-   <div className=' sm:mx-auto sm:px-6 px-16 sm:flex grid grid-cols-2  sm:max-w-max origin-center items-center sm:gap-8  lg:px-8  '>
+   <div className=' sm:mx-auto sm:px-6 px-16 sm:flex grid grid-cols-2  sm:max-w-max origin-center items-center sm:gap-2  lg:px-8  '>
    <Image
                                             src={`/technologieslogo/laravelApp.png`}
                                             // loader={imageLoader}
@@ -1066,7 +1066,7 @@ There are other more projects to show. This website itself was built using the G
  
   </div>
   
-          <div  className=" carousel2   sm:w-[1900px] w-[900px]  h-screen flex flex-nowrap overflow-hidden justify-evenly">
+          <div  className=" carousel2   sm:w-[1700px] w-[900px]  h-screen flex flex-nowrap overflow-hidden justify-evenly">
       {/* Example Carousel Items (Panels) */}
       <div className="panelo  w-[400px]   flex items-center justify-center text-4xl overflow-hidden">
           
