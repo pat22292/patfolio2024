@@ -923,7 +923,7 @@ return(
                                         />
         </div>
       </div> */}
-      <div className='flex items-center justify-center pb-64'>
+      <div className='flex items-center justify-center pb-64 z-50'>
     <a  href="https://next-js-v13-template-2023.vercel.app/" 
             target="_blank" rel="noopener noreferrer">
         <div className='flex items-center justify-center bg-black rounded-full px-5'>

@@ -37,7 +37,7 @@ export default function Home() {
     <div>
       
 
-      <div className='fixed flex justify-center items-end h-screen  w-screen -z-0'>
+      <div className='fixed flex justify-center items-end h-screen  w-screen -z-50'>
       <Image
                                             src={`/New Project.png`}
                                             // loader={imageLoader}
